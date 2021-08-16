@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap');
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+.toggle
+{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #000 url("../Images/menu.png");
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 1000;
+}
+.toggle.active
+{
+    background: #000 url("../Images/close.png");
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+section
+{
+    padding: 100px;
+    min-height: 100vh;
+}
+.banner
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(243, 243, 243);
+}
+.banner .imagebx
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 100%;
+}
+.banner .imagebx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner .contentbx,
+.sideBar
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 600px);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+.banner .contentbx .logotext
+{
+    position: absolute;
+    top: 30px;
+    left: 100px;
+    font-size: 1.5em;
+    background-color: #333;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 4px 10px;
+    font-weight: 600;
+}
+.banner .contentbx h4
+{
+    font-size: 1.8em;
+    font-weight: 300;
+    color: #333;
+}
+.banner .contentbx h4 span
+{
+    color: #00bcd4;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+.banner .contentbx h2
+{
+    font-size: 3em;
+    color: #333;
+    line-height: 1.5em;
+}
+p
+{
+    font-size: 1.3em;
+    color: #333;
+    margin: 20px 0px;
+    font-weight: 300;
+}
+.btn
+{
+    display: inline-block;
+    background-color: #00bcd4;
+    color: #fff;
+    letter-spacing: 2px;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+}
+.btn:hover
+{
+    background-color: #028a9c;
+}
+.sideBar
+{
+    position: fixed;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    z-index: 100;
+    transition: 0.3s;
+    right: -100%;
+}
+.sideBar ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sideBar ul li
+{
+    list-style: none;
+}
+.sideBar ul li a
+{
+    text-decoration: none;
+    color: #fff;
+    font-size: 2em;
+    margin: 10px 0px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+.sideBar ul li a:hover
+{
+    color: #00bcd4;
+}
+.sideBar.active
+{
+    right: 0;
+}
+.sci
+{
+    position: absolute;
+    left: 100px;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sci li
+{
+    list-style: none;
+    margin-right: 40px;
+}
+.sci li a img
+{
+    transform: scale(0.7);
+    opacity: 0.5;
+    transition: 0.4s;
+}
+.sci li a img:hover
+{
+    opacity: 1;
+    transform: scale(1);
+}
+.about
+{
+    background-color: #000;
+}
+.title
+{
+    text-align: center;
+    width: 100%;
+}
+.title h2
+{
+    color: #00bcd4;
+    font-size: 2em;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.title p
+{
+    display: inline-block;
+    max-width: 700px;
+}
+.title.white p
+{
+    color: #fff;
+}
+.title.white h2::before
+{
+    background-color: #fff;
+}
+.about .content
+{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+.about .content .textbx
+{
+    min-width: 49%;
+    width: 49%;
+}
+.about .content .textbx p
+{
+    color: #fff;
+}
+.about .content .imagebx
+{
+    margin-left: 40px;
+}
+.about .content .imagebx img
+{
+    max-width: 100%;
+}
+.services
+{
+    border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+}
+.services .content
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 40px;
+}
+.services .content .servicebx
+{
+    padding: 40px 20px;
+    margin: 20px;
+    max-width: 340px;
+    text-align: center;
+    background-color: #f5f5f5;
+    transition: 0.5s;
+}
+.services .content .servicebx:hover
+{
+    background-color: #000;
+    color: #fff;
+}
+.services .content .servicebx img
+{
+    max-width: 80px;
+    transition: 0.5s;
+}
+.services .content .servicebx:hover img
+{
+    filter: invert(1);
+}
+.services .content .servicebx p
+{
+    transition: 0.4s;
+}
+.services .content .servicebx:hover p
+{
+    color: #fff;
+}
+.work .content
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.work .content .workbx
+{
+    position: relative;
+    width: 280px;
+    height: 280px;
+    margin: 10px;
+    transition: 0.5s;
+    text-align: center;
+}
+.work .content .workbx .imagebx,
+.work .content .workbx .textbx
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.work .content .workbx .imagebx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.work .content .workbx .textbx
+{
+    background-color: #000;
+    opacity: 0;
+    transition: 0.5s;
+}
+.work .content .workbx .textbx:hover
+{
+    opacity: 0.8;
+}
+.work .content .workbx .textbx h3
+{
+    color: #fff;
+    font-size: 2em;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+.contact
+{
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact p
+{
+    color: #fff;
+}
+.contact .contactform
+{
+    position: relative;
+    width: 700px;
+    margin-top: 20px;
+}
+.contact .contactform .row
+{
+    width: 100%;
+    display: flex;
+}
+.contact .contactform .row input
+{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #111;
+    color: #ffff;
+    font-size: 16px;
+}
+.contact .contactform .row input[type="submit"]
+{
+    background-color: #00bcd4;
+    color: #fff;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.contact .contactform .row input[type="submit"]:hover
+{
+    background-color: #028a9c;
+}
+.contact .contactform .row .col50
+{
+    width: 50%;
+    margin: 10px;
+}
+.contact .contactform .row .col100
+{
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+}
+.contact .contactform .row .col100 textarea
+{
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #111;
+    color: #ffff;
+    font-size: 16px;
+    resize: none;
+}
+.footer
+{
+    background-color: #02535e;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.footer h2
+{
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+.footer h2 a
+{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+}
